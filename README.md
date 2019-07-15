@@ -16,5 +16,5 @@
 * main.cpp: Onde as funções são chamadas.
 * mygl.h: Contém as funções responsáveis pelas implementações gráficas do programa.
 
-## PutPixel()
-
+## Função PutPixel()
+![image](https://user-images.githubusercontent.com/52431296/61233148-3dcd0700-a706-11e9-91f1-4a65278b760c.png)
