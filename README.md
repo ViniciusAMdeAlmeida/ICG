@@ -30,7 +30,7 @@
   
   ![image](https://user-images.githubusercontent.com/52431296/61233353-c350b700-a706-11e9-968d-e6d920872883.png)
   
-  Logo, para realizar o cálculo primeiro testamos se o pixel apontado respeita as delimitações da tela representada pela variável IMAGE_WIDTH que corresponde à altura da tela e a IMAGE_HEIGHT que corresponde a largura, ambas declaradas em definitions.h. Levando em conta que a o número de pixels na tela é dado pela multiplicação de número de linhas pelo número de colunas, a memória deve ter esta mesma quantidade de posições para representar a tela, só que de forma linear.
+  Logo, para realizar o cálculo primeiro testamos se o pixel apontado respeita as delimitações da tela representada pela variável IMAGE_WIDTH que corresponde à altura da tela e a IMAGE_HEIGHT que corresponde a largura. Levando em conta que a o número de pixels na tela é dado pela multiplicação de número de linhas pelo número de colunas, a memória deve ter esta mesma quantidade de posições para representar a tela, só que de forma linear.
   
   Para isso usaremos um algoritmo, que decide a posição de cada pixel e cada canal de um pixel na memória, considerando largura em pixels da tela:
   
@@ -50,7 +50,7 @@
   
 ## Função DrawLine()
 
-  Para a função drawLine(), devemos falar um pouco sobre o Algoritmo de Bresenham, principal componente que será usado na próxima função. 
+  Para a função drawLine(), devemos falar um pouco sobre o Algoritmo de Bresenham, principal componente dessa função.
   
   Esse algoritmo é usado para rasterizar linhas, sendo o mais utilizado para esse objetivo,  principalmente pelo seu baixo valor computacional. E o que ele faz é decidir quais pontos irão fazer parte ou não das retas, através do ponto médio, usando apenas operações aritméticas de inteiros de forma incremental, resultando em um ganho de processamento.
   
