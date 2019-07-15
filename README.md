@@ -2,7 +2,7 @@
 ###### Disciplina: [GDSCO0051] Introdução à Computação Gráfica - Turma 01. 
 ###### Professor: Christian Azambuja Pagot (email: christian@ci.ufpb.br).
 ###### Dupla: Altamir Marconi da Silva Filho – 20170002856
-######      Vinícius Amaral Monteiro de ALmeida - 20180002250
+######      Vinícius Amaral Monteiro de Almeida - 20180002250
 
   Foi proposto pelo professor Christian Azambuja Pagot, da disciplina de Introdução à Computação Gráfica,  que implementássemos em uma Framework criada pelo professor um programa que simulasse o processo de Rasterização manualmente.
 
@@ -17,7 +17,32 @@
 * mygl.h: Contém as funções responsáveis pelas implementações gráficas do programa.
 
 ## Função PutPixel()
+
 ![image](https://user-images.githubusercontent.com/52431296/61233148-3dcd0700-a706-11e9-91f1-4a65278b760c.png)
 
   A função putPixel() é responsável por rasterizar um ponto na memória de vídeo, ela recebe com parâmetro a posição na tela representada por (X, Y) e uma estrutura que representará a cor do ponto, contendo os componentes RGBA. Essa função permitirá que as outras funções possam usá-la em futuras operações.
+  
+![image](https://user-images.githubusercontent.com/52431296/61233315-aae09c80-a706-11e9-9475-ac6470663ee2.png)
+
+  Cada pixel possui 4 componentes de cor (RGBA), cada uma representada por 1 byte (unsigned char), no programa usaremos o ponteiro FBptr que já é predefinida pelo professor que aponta para o início da memória de vídeo(no caso a primeira posição da memória de vídeo apontada seria o pixel (X, Y) = (0, 0) corresponde ao canto superior esquerdo da tela).
+  
+  Para utilizarmos os pixels teremos de calcular cada byte que precisaremos utilizar, para isso basta apenas achar o 1° dos 4 bytes de cada pixel (o do elemento R), os outros se localizam um byte a frente (acréscimo de 1) do anterior.
+  
+  ![image](https://user-images.githubusercontent.com/52431296/61233353-c350b700-a706-11e9-968d-e6d920872883.png)
+  
+  Logo, para realizar o cálculo primeiro testamos se o pixel apontado respeita as delimitações da tela representada pela variável IMAGE_WIDTH que corresponde à altura da tela e a IMAGE_HEIGHT que corresponde a largura, ambas declaradas em definitions.h. Levando em conta que a o número de pixels na tela é dado pela multiplicação de número de linhas pelo número de colunas, a memória deve ter esta mesma quantidade de posições para representar a tela, só que de forma linear.
+  Para isso usaremos um algoritmo, que decide a posição de cada pixel e cada canal de um pixel na memória, considerando largura em pixels da tela:
+  ![image](https://user-images.githubusercontent.com/52431296/61233394-dbc0d180-a706-11e9-9341-679e76f20415.png)
+
+  Onde W é a largura da imagem, ou seja, IMAGE_HEIGTH.
+  ![image](https://user-images.githubusercontent.com/52431296/61233431-eaa78400-a706-11e9-89f9-f01658ce0178.png)
+  
+  Por fim, após o calculo que identifica o byte, atribuímos a ele a cor definida e assim rasterizando o ponto na tela. Com todas essa definições o nosso código ficará da seguinte maneira:
+  ![image](https://user-images.githubusercontent.com/52431296/61233453-fa26cd00-a706-11e9-81a6-14be464e7318.png)
+  Resultado: Pixel na posição (150,150):
+  
+  ![image](https://user-images.githubusercontent.com/52431296/61233480-0ca10680-a707-11e9-8b48-58d494184806.png)
+
+
+  
   
