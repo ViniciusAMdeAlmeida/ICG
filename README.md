@@ -69,6 +69,18 @@
   ![image](https://user-images.githubusercontent.com/52431296/61233726-99e45b00-a707-11e9-924d-e02d89af62fc.png)
 
   ![image](https://user-images.githubusercontent.com/52431296/61233748-a963a400-a707-11e9-9b02-af88dca316bd.png)
+  
+  ## Interpolação linear
+  
+  Para realizar a mudança gradativa da cor da reta, a função drawLine() irá receber dois parâmetros de cor, e ao longo da reta irá variar a sua cor conforme ela se aproxima da outra extremidade.
+  
+  Para isso, calculamos uma taxa de incremento dividindo cada componente RGBA da cor em questão pelo dx ou dy, dependendo da inclinação da reta, e a partir disso, incrementar em essa taxa em cada componente RGBA ao longo da reta, fazendo com que cada pixel pintado terá uma cor diferente, dando esse efeito de gradiente.
+  
+  Resultado:
+
+![image](https://user-images.githubusercontent.com/52431296/61233816-d912ac00-a707-11e9-81dd-4a3fde6d5d93.png)
+
+![image](https://user-images.githubusercontent.com/52431296/61233830-e039ba00-a707-11e9-8052-38f9d5593c16.png)
 
 
   
