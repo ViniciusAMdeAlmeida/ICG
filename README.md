@@ -82,6 +82,29 @@
 
 ![image](https://user-images.githubusercontent.com/52431296/61233830-e039ba00-a707-11e9-8052-38f9d5593c16.png)
 
+## Função DrawTriangle()
+
+  Para rasterizar um triângulo, utilizaremos a função drawTriangle(), que  recebe 3 coordenadas de pontos e 3 cores. A partir disso a função drawLine() é chamada 3 vezes, fazendo uma reta do primeiro ao segundo ponto, do segundo ao terceiro, e do terceiro ao primeiro.
+  
+  ![image](https://user-images.githubusercontent.com/52431296/61233902-0e1efe80-a708-11e9-8f83-d5949df97a04.png)
+
+  Resultado:
+  
+  ![image](https://user-images.githubusercontent.com/52431296/61233921-1bd48400-a708-11e9-9acc-fe2ba0a82b7a.png)
+  
+## Principais dificuldades
+
+  A principal dificuldade que encontramos foi, sem dúvida, entender o funcionamento do algoritmo de Bresenham e adaptá-lo para os outros octantes.
+  
+## Referências bibliográficas
+
+  *https://en.wikipedia.org/wiki/Bresenham%27s_line_algorithm
+  *https://github.com/ThiagoLuizNunes/CG-Assignments/tree/master/cg_framework
+  *Material de sala de aula do professor Christian Pagot.
+
+
+
+
 
   
   
