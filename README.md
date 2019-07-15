@@ -47,6 +47,34 @@
   Resultado: Pixel na posição (150,150):
   
   ![image](https://user-images.githubusercontent.com/52431296/61233480-0ca10680-a707-11e9-8b48-58d494184806.png)
+  
+## Função DrawLine()
+
+  Para a função drawLine(), devemos falar um pouco sobre o Algoritmo de Bresenham, principal componente que será usado na próxima função. 
+  
+  Esse algoritmo é usado para rasterizar linhas, sendo o mais utilizado para esse objetivo,  principalmente pelo seu baixo valor computacional. E o que ele faz é decidir quais pontos irão fazer parte ou não das retas, através do ponto médio, usando apenas operações aritméticas de inteiros de forma incremental, resultando em um ganho de processamento.
+  
+  ![image](https://user-images.githubusercontent.com/52431296/61233649-65709f00-a707-11e9-87ea-fc1f3590239d.png)
+  
+  Abaixo está a função drawLine() com  o Algoritmo de Bresenham, considerando x0 e y0 como as coordenadas iniciais e x1 e y1 como as coordenadas finais.
+  
+  ![image](https://user-images.githubusercontent.com/52431296/61233676-74575180-a707-11e9-8e5c-33c2f3d32e0b.png)
+
+  Entretanto, esse algoritmo só funciona para linhas no primeiro octante(coeficiente angular entre 0 e 1). E para implementar os outros octantes, é necessário verificar em qual quadrante a linha está, com base nas relações entre dx e dy, e a partir disso alterar o algoritmo de Bresenham para que ele funcione em qualquer octante.
+  
+  ![image](https://user-images.githubusercontent.com/52431296/61233693-83d69a80-a707-11e9-80c8-3eb2dcd2b07c.png)
+  
+  Resultado:
+  
+  ![image](https://user-images.githubusercontent.com/52431296/61233726-99e45b00-a707-11e9-924d-e02d89af62fc.png)
+
+  ![image](https://user-images.githubusercontent.com/52431296/61233748-a963a400-a707-11e9-9b02-af88dca316bd.png)
+
+
+  
+  
+
+
 
 
   
