@@ -98,9 +98,9 @@
   
 ## Referências bibliográficas
 
-  *https://en.wikipedia.org/wiki/Bresenham%27s_line_algorithm
-  *https://github.com/ThiagoLuizNunes/CG-Assignments/tree/master/cg_framework
-  *Material de sala de aula do professor Christian Pagot.
+* https://en.wikipedia.org/wiki/Bresenham%27s_line_algorithm
+* https://github.com/ThiagoLuizNunes/CG-Assignments/tree/master/cg_framework
+* Material de sala de aula do professor Christian Pagot.
 
 
 
