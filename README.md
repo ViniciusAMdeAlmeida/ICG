@@ -18,3 +18,6 @@
 
 ## Função PutPixel()
 ![image](https://user-images.githubusercontent.com/52431296/61233148-3dcd0700-a706-11e9-91f1-4a65278b760c.png)
+
+  A função putPixel() é responsável por rasterizar um ponto na memória de vídeo, ela recebe com parâmetro a posição na tela representada por (X, Y) e uma estrutura que representará a cor do ponto, contendo os componentes RGBA. Essa função permitirá que as outras funções possam usá-la em futuras operações.
+  
