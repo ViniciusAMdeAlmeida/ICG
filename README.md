@@ -31,14 +31,19 @@
   ![image](https://user-images.githubusercontent.com/52431296/61233353-c350b700-a706-11e9-968d-e6d920872883.png)
   
   Logo, para realizar o cálculo primeiro testamos se o pixel apontado respeita as delimitações da tela representada pela variável IMAGE_WIDTH que corresponde à altura da tela e a IMAGE_HEIGHT que corresponde a largura, ambas declaradas em definitions.h. Levando em conta que a o número de pixels na tela é dado pela multiplicação de número de linhas pelo número de colunas, a memória deve ter esta mesma quantidade de posições para representar a tela, só que de forma linear.
+  
   Para isso usaremos um algoritmo, que decide a posição de cada pixel e cada canal de um pixel na memória, considerando largura em pixels da tela:
+  
   ![image](https://user-images.githubusercontent.com/52431296/61233394-dbc0d180-a706-11e9-9341-679e76f20415.png)
 
   Onde W é a largura da imagem, ou seja, IMAGE_HEIGTH.
+  
   ![image](https://user-images.githubusercontent.com/52431296/61233431-eaa78400-a706-11e9-89f9-f01658ce0178.png)
   
   Por fim, após o calculo que identifica o byte, atribuímos a ele a cor definida e assim rasterizando o ponto na tela. Com todas essa definições o nosso código ficará da seguinte maneira:
+  
   ![image](https://user-images.githubusercontent.com/52431296/61233453-fa26cd00-a706-11e9-81a6-14be464e7318.png)
+  
   Resultado: Pixel na posição (150,150):
   
   ![image](https://user-images.githubusercontent.com/52431296/61233480-0ca10680-a707-11e9-8b48-58d494184806.png)
